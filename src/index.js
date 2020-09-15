@@ -22,7 +22,7 @@ function Scene() {
         H = window.innerHeight;
 
         //LIGHTS
-        pointLight = new;
+        pointLight = new THREE.PointLight(0xD0D0D0, 2, 1000);
         THREE.PointLight(0xD0D0D0, 2, 1000);
         pointLight.position.z = 100;
         pointLight.position.y = 100;
@@ -40,10 +40,10 @@ function Scene() {
         var mesh;
         var color;
 
-        color = new THREE.Color("rgb(135,90,0)");
+        color = new THREE.Color("rgb(153,90,0)");
         material = new THREE.MeshPhongMaterial( {
             color: color, 
-            wireframe = false;
+            wireframe = false
         });
 
         mesh = new THREE.Mesh(geometry, material);
@@ -93,7 +93,7 @@ function Scene() {
                 col2.g +=0.64/levels;
                 material = new THREE.MeshPhongMaterial({
                     color: col2,
-                    wireframe : false;
+                    wireframe : false
                 });
                 mesh = new THREE.Mesh(geometry, material);
                 new_mat_t0.makeTranslation(-edge_w/2, 0, 0);
